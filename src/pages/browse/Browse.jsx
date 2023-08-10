@@ -3,7 +3,9 @@ import { AnimatedPage } from '../../components/navbar/AnimatedPage'
 export const Browse = () => {
   return (
     <AnimatedPage>
-      <div>Browse</div>
+      <div className='container'>
+        <p>Browse</p>
+      </div>
     </AnimatedPage>
   )
 }
