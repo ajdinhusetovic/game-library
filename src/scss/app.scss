@@ -15,3 +15,10 @@ body {
     background-color: config.$color-black;
     color: yellow;
 }
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
