@@ -1,0 +1,69 @@
+@use './config';
+
+.navbar {
+    .navbar-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo-container {
+            width: 100%;
+
+            #title {
+                font-family: config.$font-handjet;
+                padding: 20px 0 20px 0;
+                font-size: 3em;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        .navbar-links {
+            font-size: 22px;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                background-color: yellow;
+                color: black;
+                border: 2px solid red;
+                border-radius: 6px;
+                padding: 2px 6px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        .navbar-wrapper {
+            flex-direction: row;
+            height: 150px;
+            width: 80%;
+            margin: 0 auto;
+            .logo-container {
+
+                #title {
+                    text-align: start;
+                    font-size: 4em;
+                }
+            }
+
+            .navbar-links {
+                align-items: baseline;
+                justify-content: right;
+
+                a {
+                    padding: 4px 20px;
+                    border-radius: 2px;
+
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,9 @@
-import React from 'react'
+import { AnimatedPage } from '../../components/navbar/AnimatedPage'
 
 export const About = () => {
   return (
-    <div>About</div>
+    <AnimatedPage>
+      <div>About</div>
+    </AnimatedPage>
   )
 }

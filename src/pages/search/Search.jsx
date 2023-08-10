@@ -1,7 +1,9 @@
-import React from 'react'
+import { AnimatedPage } from '../../components/navbar/AnimatedPage'
 
 export const Search = () => {
   return (
-    <div>Search</div>
+    <AnimatedPage>
+      <div>Search</div>
+    </AnimatedPage>
   )
 }
