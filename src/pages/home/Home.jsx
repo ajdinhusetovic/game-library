@@ -12,19 +12,23 @@ export const Home = () => {
   console.log(data)
 
   if (isLoading) {
-    return <h1>Loading...</h1>
+    return <h2 className='loading-text'>Loading...</h2>
   }
 
   return (
     <AnimatedPage>
       <div className='container home'>
         {data.map((game) => {
-          return <div className='game-card'>
-            <div><img src={game.thumb} width={100} /></div>
-            <div className='title'><a href={`https://www.cheapshark.com/redirect?dealID=${game.dealID}`} className='game-link'>{game.title}</a></div>
-            <div className='price'>$<span id='normal-price'>{game.normalPrice}</span> - ${game.salePrice}</div>
-            <div>Deal rating: {game.dealRating}</div>
-          </div>
+          return (
+            <>
+              <div className='game-card'>
+                <div><img src={game.thumb} width={200}/></div>
+                <div className='title'><a href={`https://www.cheapshark.com/redirect?dealID=${game.dealID}`} className='game-link'>{game.title}</a></div>
+                <div className='price'>$<span id='normal-price'>{game.normalPrice}</span> - ${game.salePrice}</div>
+                <div>Deal rating: {game.dealRating}</div>
+              </div>
+            </>
+          )
         })}
       </div>
     </AnimatedPage>

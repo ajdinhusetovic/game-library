@@ -5,17 +5,20 @@
     flex-direction: column;
     margin-top: 40px;
     gap: 20px;
+    width: 100%;
 
     .game-card {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        padding: 8px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        background-color: lighten($color: config.$color-black, $amount: 5%);
+        gap: 8px;
+        background-color: lighten($color: config.$color-black, $amount: 3%);
+        font-size: 18px;
 
         &:last-child {
             margin-bottom: 40px;
@@ -29,5 +32,37 @@
         #normal-price {
             text-decoration: line-through;
         }
+    }
+}
+
+.hor-line {
+    border: 1px solid red;
+}
+
+.loading-text {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .home {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .game-card {
+            width: 30%;
+            margin: 0 auto;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: lighten($color: config.$color-black, $amount: 3%);
+            font-size: 18px;
+        }
+
     }
 }
