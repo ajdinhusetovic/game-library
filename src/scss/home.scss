@@ -17,7 +17,7 @@
         justify-content: center;
         text-align: center;
         gap: 8px;
-        background-color: lighten($color: config.$color-black, $amount: 3%);
+        background-color: lighten($color: config.$color-black, $amount: 5%);
         font-size: 18px;
 
         &:last-child {
