@@ -19,6 +19,7 @@
         gap: 8px;
         background-color: lighten($color: config.$color-black, $amount: 5%);
         font-size: 18px;
+        border-radius: 6px;
 
         &:last-child {
             margin-bottom: 40px;
@@ -31,7 +32,7 @@
 
         #normal-price {
             text-decoration: line-through;
-            color: red;
+            color: yellow;
         }
 
         #sale-price {
