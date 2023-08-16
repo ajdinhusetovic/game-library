@@ -19,6 +19,7 @@
         gap: 8px;
         background-color: lighten($color: config.$color-black, $amount: 5%);
         font-size: 18px;
+        border-radius: 6px;
 
         &:last-child {
             margin-bottom: 40px;
@@ -31,6 +32,10 @@
 
         #normal-price {
             text-decoration: line-through;
+        }
+
+        #sale-price {
+            color: green;
         }
     }
 }
@@ -66,6 +71,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
 
         .game-card {
             width: 30%;
@@ -78,6 +85,15 @@
             text-align: center;
             background-color: lighten($color: config.$color-black, $amount: 5%);
             font-size: 18px;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
         }
 
     }
