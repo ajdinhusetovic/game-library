@@ -18,7 +18,7 @@ export const Home = () => {
 
   console.log(data)
 
-  if (!isLoading) {
+  if (isLoading) {
     return <div id='loading-controller'>
       <img
         src={controllerImage}
