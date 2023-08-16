@@ -2,8 +2,15 @@ import { AnimatedPage } from '../../components/navbar/AnimatedPage'
 import { useQuery } from 'react-query'
 import axios from 'axios'
 import '../../scss/home.scss'
+import controllerImage from '../../assets/controller.png'
 
 export const Home = () => {
+
+  const spinTransition = {
+    loop: Infinity,
+    ease: "linear",
+    duration: 1
+  }
 
   const { data, isLoading } = useQuery(["game"], () => {
     return axios.get("https://www.cheapshark.com/api/1.0/deals").then((res) => res.data)
@@ -11,8 +18,14 @@ export const Home = () => {
 
   console.log(data)
 
-  if (isLoading) {
-    return <h2 className='loading-text'>Loading...</h2>
+  if (!isLoading) {
+    return <div id='loading-controller'>
+      <img
+        src={controllerImage}
+        alt="game controller image"
+        id='loading-controller-image'
+      />
+    </div>
   }
 
   return (
