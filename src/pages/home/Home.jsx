@@ -6,18 +6,19 @@ import controllerImage from '../../assets/controller.png'
 
 export const Home = () => {
 
+  // animation
   const spinTransition = {
     loop: Infinity,
     ease: "linear",
     duration: 1
   }
 
+  // fetching data
   const { data, isLoading } = useQuery(["game"], () => {
     return axios.get("https://www.cheapshark.com/api/1.0/deals").then((res) => res.data)
   })
 
-  console.log(data)
-
+  // loading screen
   if (isLoading) {
     return <div id='loading-controller'>
       <img

@@ -1,5 +1,7 @@
 import { AnimatedPage } from '../../components/navbar/AnimatedPage'
 import '../../scss/search.scss'
+import axios from 'axios'
+import { useQuery } from 'react-query'
 
 export const Search = () => {
   return (
