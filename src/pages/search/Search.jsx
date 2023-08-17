@@ -8,7 +8,7 @@ export const Search = () => {
 
   const [gameTitle, setGameTitle] = useState("")
 
-  const { data, isLoading, refetch } = useQuery(["game"], () => {
+  const { data: game, isLoading, refetch } = useQuery(["game"], async () => {
     return axios.get(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`).then((res) => res.data)
   })
 
@@ -22,8 +22,9 @@ export const Search = () => {
     }
   }
 
-  console.log(data)
-
+  if (isLoading) {
+    return <h1>is Loading</h1>
+  }
 
   return (
     <AnimatedPage>
@@ -35,7 +36,7 @@ export const Search = () => {
         </div>
 
         <div className='games-wrapper'>
-          {data.map((game) => {
+          {game.map((game) => {
             return <h1>{game.external}</h1>
           })}
         </div>
