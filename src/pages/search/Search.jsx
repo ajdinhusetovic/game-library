@@ -9,7 +9,7 @@ export const Search = () => {
   const [gameTitle, setGameTitle] = useState("")
   const [hasRefetched, setHasRefetched] = useState(false)
 
-  const { data: game, isLoading, refetch, } = useQuery(["game"], async () => {
+  const { data: game, isLoading, refetch, isFetching } = useQuery(["game"], async () => {
     return axios.get(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`).then((res) => res.data)
   })
 
@@ -26,6 +26,10 @@ export const Search = () => {
 
   if (isLoading) {
     return <h1>is Loading</h1>
+  }
+
+  if (isFetching) {
+    return <h1>Loading...</h1>
   }
 
   return (
