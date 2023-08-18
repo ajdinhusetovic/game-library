@@ -7,8 +7,9 @@ import { useQuery } from 'react-query'
 export const Search = () => {
 
   const [gameTitle, setGameTitle] = useState("")
+  const [hasRefetched, setHasRefetched] = useState(false)
 
-  const { data: game, isLoading, refetch } = useQuery(["game"], async () => {
+  const { data: game, isLoading, refetch, } = useQuery(["game"], async () => {
     return axios.get(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`).then((res) => res.data)
   })
 
@@ -19,6 +20,7 @@ export const Search = () => {
   const handleKeyDown = (e) => {
     if (e.code === "Enter") {
       refetch()
+      setHasRefetched(true)
     }
   }
 
@@ -31,14 +33,23 @@ export const Search = () => {
       <div className='container'>
         <div className='input-wrapper'>
           <h2>Search for a specific title</h2>
-          <input type="text" onChange={handleInput} onKeyDown={handleKeyDown}/>
+          <input type="text" onChange={handleInput} onKeyDown={handleKeyDown} />
           <button onClick={refetch}>refetch</button>
         </div>
 
         <div className='games-wrapper'>
-          {game.map((game) => {
-            return <h1>{game.external}</h1>
-          })}
+          {game.length > 0 ? (
+            game.map((game) => {
+              return (
+                <>
+                  <div className='search-game-card'>
+                    <h2>{game.external}</h2>
+                  </div>
+                </>
+              )
+            })
+          ) : (hasRefetched ? <p id='data-error'>No results found</p> : null)
+          }
         </div>
       </div>
     </AnimatedPage>
