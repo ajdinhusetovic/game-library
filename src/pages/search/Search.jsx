@@ -3,6 +3,7 @@ import { AnimatedPage } from '../../components/navbar/AnimatedPage'
 import '../../scss/search.scss'
 import axios from 'axios'
 import { useQuery } from 'react-query'
+import { Accordion } from '../../components/navbar/Accordion'
 
 export const Search = () => {
 
@@ -42,12 +43,12 @@ export const Search = () => {
         </div>
 
         <div className='games-wrapper'>
-          {game.length > 0 ? (
+          {game && game.length > 0 ? (
             game.map((game) => {
               return (
                 <>
                   <div className='search-game-card'>
-                    <h2>{game.external}</h2>
+                    <Accordion game={game}/>
                   </div>
                 </>
               )
