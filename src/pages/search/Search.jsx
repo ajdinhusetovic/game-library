@@ -19,7 +19,7 @@ export const Search = () => {
   }
 
   const handleKeyDown = (e) => {
-    if (e.code === "Enter") {
+    if (e.code === "Enter" || e.code === "Go") {
       refetch()
       setHasRefetched(true)
     }
