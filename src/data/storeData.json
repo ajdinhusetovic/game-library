@@ -3,8 +3,7 @@
         "storeName": "Steam",
         "isActive": 1,
         "images": {
-            "banner": "\/img\/stores\/banners\/0.png",
-            "logo": "\/img\/stores\/logos\/0.png",
+            "logo": "https://imgs.search.brave.com/29Vug0-F4tGMzrw_uJd0rvSi1j8jCbOaDJLuT_aaUWI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/dHlwLnVzL2ZpbGUv/c3RlYW0uc3Zn.svg",
             "icon": "\/img\/stores\/icons\/0.png"
         }
     },
