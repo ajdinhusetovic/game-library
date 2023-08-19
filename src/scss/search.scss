@@ -42,7 +42,6 @@
 }
 
 .games-wrapper {
-    width: 90%;
     margin: 40px auto 40px auto;
 }
 
@@ -55,12 +54,11 @@
 @media only screen and (min-width: 768px) {
     .games-wrapper {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
+        
         padding-bottom: 40px;
         .search-game-card {
-            width: 40%;
-            margin: 0 auto;
+            width: 30%;
         }
     }
 
@@ -83,7 +81,7 @@
     .games-wrapper {
         .search-game-card {
             width: 30%;
-            margin: 0 auto;
+            margin-left: 400px;
         }
     }
 
