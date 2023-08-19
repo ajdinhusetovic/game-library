@@ -12,6 +12,7 @@
         font-family: config.$font-handjet;
         letter-spacing: 1px;
         text-transform: uppercase;
+        margin-bottom: 20px;
     }
 
     .input-container {
@@ -19,6 +20,7 @@
         border-radius: 8px;
         display: flex;
         align-items: center;
+
         input {
             padding: 8px;
             border: none;
@@ -61,6 +63,20 @@
             margin: 0 auto;
         }
     }
+
+    .input-wrapper {
+        h2 {
+            font-size: 34px;
+        }
+
+        .input-container {
+            width: 70%;
+
+            input {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -70,4 +86,5 @@
             margin: 0 auto;
         }
     }
+
 }

@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useQuery } from 'react-query'
 import { Accordion } from '../../components/navbar/Accordion'
 import { BsSearch } from 'react-icons/bs'
+import { Spinner } from '../../components/navbar/Spinner'
 
 export const Search = () => {
 
@@ -27,11 +28,11 @@ export const Search = () => {
   }
 
   if (isLoading) {
-    return <h1>is Loading</h1>
+    return <Spinner />
   }
 
   if (isFetching) {
-    return <h1>Loading...</h1>
+    return <Spinner />
   }
   return (
     <AnimatedPage>

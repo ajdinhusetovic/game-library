@@ -27,6 +27,10 @@
     padding: 8px;
     cursor: pointer;
 
+    span {
+        color: red;
+    }
+
     .card-title {
         font-size: 18px;
         text-overflow: ellipsis;
@@ -55,6 +59,10 @@
             a {
                 text-decoration: underline;
                 color: yellow;
+            }
+
+            #deal-price {
+                color: green;
             }
         }
     }

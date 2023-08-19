@@ -3,6 +3,7 @@ import { useQuery } from 'react-query'
 import axios from 'axios'
 import '../../scss/home.scss'
 import controllerImage from '../../assets/controller.png'
+import { Spinner } from '../../components/navbar/Spinner'
 
 export const Home = () => {
 
@@ -20,13 +21,7 @@ export const Home = () => {
 
   // loading screen
   if (isLoading) {
-    return <div id='loading-controller'>
-      <img
-        src={controllerImage}
-        alt="game controller image"
-        id='loading-controller-image'
-      />
-    </div>
+    return <Spinner />
   }
 
   return (

@@ -49,6 +49,7 @@
             height: 150px;
             width: 80%;
             margin: 0 auto;
+
             .logo-container {
 
                 #title {
@@ -69,6 +70,14 @@
                     letter-spacing: 2px;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        .navbar-links {
+            gap: 20px;
         }
     }
 }

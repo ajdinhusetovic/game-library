@@ -35,7 +35,7 @@ export const Accordion = ({ game }) => {
                             {deals.map((deal) => (
                                 <li key={deal.dealID}>
                                     <a href={`https://www.cheapshark.com/redirect?dealID=${deal.dealID}`} className='store-name'>{stores[deal.storeID].storeName}</a>
-                                    <p>${deal.price}</p>
+                                    <p id='deal-price'>${deal.price}</p>
                                 </li>
                             ))}
                         </ul>
