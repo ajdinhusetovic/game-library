@@ -24,6 +24,7 @@ export const Accordion = ({ game }) => {
     return (
         <>
             <div className='card'>
+                <div className='img-wrapper'><img src={game.thumb} width={100} /></div>
                 <div className='card-title-wrapper' onClick={handleClick}>
                     <h2 className='card-title'>{game.external}</h2>
                     <span>{isExpanded ? '-' : '+'}</span>
@@ -33,8 +34,7 @@ export const Accordion = ({ game }) => {
                         <ul>
                             {deals.map((deal) => (
                                 <li key={deal.dealID}>
-                                    <p>Deal ID: {deal.price}</p>
-                                    <p>Store name: {stores[deal.storeID].storeName}</p>
+                                    <img src={stores[deal.storeID].images.logo} alt="" />
                                 </li>
                             ))}
                         </ul>
