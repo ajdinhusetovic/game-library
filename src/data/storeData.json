@@ -3,17 +3,14 @@
         "storeName": "Steam",
         "isActive": 1,
         "images": {
-            "logo": "https://imgs.search.brave.com/29Vug0-F4tGMzrw_uJd0rvSi1j8jCbOaDJLuT_aaUWI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/dHlwLnVzL2ZpbGUv/c3RlYW0uc3Zn.svg",
-            "icon": "\/img\/stores\/icons\/0.png"
+            "logo": "https://imgs.search.brave.com/29Vug0-F4tGMzrw_uJd0rvSi1j8jCbOaDJLuT_aaUWI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/dHlwLnVzL2ZpbGUv/c3RlYW0uc3Zn.svg"
         }
     },
     "2": {
         "storeName": "GamersGate",
         "isActive": 1,
         "images": {
-            "banner": "\/img\/stores\/banners\/1.png",
-            "logo": "\/img\/stores\/logos\/1.png",
-            "icon": "\/img\/stores\/icons\/1.png"
+            "logo": "https://scontent.fsjj1-1.fna.fbcdn.net/v/t39.30808-6/347590501_630609651950891_7408998500600521600_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=dzTYTWKJmvkAX_FZA3o&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfBFzo2o4n6xxZSMJ1mWwcgxjC73WDqHEi78NtPpeOsn0A&oe=64E5D42C"
         }
     },
     "3": {

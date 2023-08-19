@@ -14,22 +14,60 @@
         text-transform: uppercase;
     }
 
-    input {
-        margin-top: 20px;
-        padding: 8px;
-        width: 90%;
+    .input-container {
+        background-color: white;
         border-radius: 8px;
-        border: none;
-        font-size: 16px;
+        display: flex;
+        align-items: center;
+        input {
+            padding: 8px;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .icon-container {
+            padding-right: 10px;
+            color: black;
+            font-weight: bold;
+        }
     }
 
 }
 
 .games-wrapper {
-    margin-top: 40px;
+    width: 90%;
+    margin: 40px auto 40px auto;
 }
 
 #data-error {
     text-align: center;
     margin-top: 20px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .games-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .search-game-card {
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .games-wrapper {
+        .search-game-card {
+            width: 30%;
+            margin: 0 auto;
+        }
+    }
 }

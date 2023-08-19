@@ -1,6 +1,9 @@
-/* Accordion.css */
+@use './config';
+
+
 .card {
-    border: 1px solid red;
+    /*border: 2px solid red;*/
+    background-color: lighten($color: config.$color-black, $amount: 5%);
     border-radius: 6px;
     margin-bottom: 10px;
 
@@ -25,7 +28,7 @@
     cursor: pointer;
 
     .card-title {
-        font-size: 14px;
+        font-size: 18px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -35,8 +38,24 @@
 
 
 .card-content.expanded {
-    border-top: 1px solid red;
+    border-top: 2px solid black;
     img {
         width: 50px;
+    }
+
+    ul {
+        margin: 10px 0 10px 0;
+        li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px;
+            font-size: 16px;
+
+            a {
+                text-decoration: underline;
+                color: yellow;
+            }
+        }
     }
 }

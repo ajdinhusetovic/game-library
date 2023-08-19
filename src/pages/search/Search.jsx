@@ -4,6 +4,7 @@ import '../../scss/search.scss'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 import { Accordion } from '../../components/navbar/Accordion'
+import { BsSearch } from 'react-icons/bs'
 
 export const Search = () => {
 
@@ -37,8 +38,10 @@ export const Search = () => {
       <div className='container'>
         <div className='input-wrapper'>
           <h2>Search for a specific title</h2>
-          <input type="text" onChange={handleInput} onKeyDown={handleKeyDown} />
-          <button onClick={refetch}>refetch</button>
+          <div className='input-container'>
+            <input type="text" onChange={handleInput} onKeyDown={handleKeyDown} />
+            <span className="icon-container" onClick={refetch}><BsSearch /></span>
+          </div>
         </div>
 
         <div className='games-wrapper'>
