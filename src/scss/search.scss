@@ -43,6 +43,7 @@
 
 .games-wrapper {
     margin: 40px auto 40px auto;
+    padding-bottom: 40px;
 }
 
 #data-error {
@@ -55,10 +56,10 @@
     .games-wrapper {
         display: flex;
         flex-wrap: wrap;
-        
         padding-bottom: 40px;
         .search-game-card {
             width: 30%;
+            margin: 0 auto;
         }
     }
 
@@ -75,14 +76,4 @@
             }
         }
     }
-}
-
-@media only screen and (min-width: 1440px) {
-    .games-wrapper {
-        .search-game-card {
-            width: 30%;
-            margin-left: 400px;
-        }
-    }
-
 }
