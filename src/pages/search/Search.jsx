@@ -32,7 +32,6 @@ export const Search = () => {
   if (isFetching) {
     return <h1>Loading...</h1>
   }
-
   return (
     <AnimatedPage>
       <div className='container'>
@@ -48,7 +47,7 @@ export const Search = () => {
               return (
                 <>
                   <div className='search-game-card'>
-                    <Accordion game={game}/>
+                    <Accordion game={game} />
                   </div>
                 </>
               )
