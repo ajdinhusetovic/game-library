@@ -56,11 +56,13 @@
     .games-wrapper {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding-bottom: 40px;
         .search-game-card {
             width: 30%;
             margin: 0 auto;
         }
+
     }
 
     .input-wrapper {
