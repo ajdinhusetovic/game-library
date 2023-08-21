@@ -19,7 +19,7 @@ export const Browse = () => {
 
   const handlePreviousPage = () => {
     if (pageNumber === 0) {
-      alert("Error")
+      return
     } else {
       setPageNumber(pageNumber - 1)
       refetch();
@@ -29,7 +29,6 @@ export const Browse = () => {
   return (
     <AnimatedPage>
       <div className='container'>
-        <p>Browse</p>
         <button onClick={handleNextPage}>Next Page</button>
         <button onClick={handlePreviousPage}>prev Page</button>
         {isLoading ? (
