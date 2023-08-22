@@ -1,5 +1,6 @@
 import React from 'react'
 import controllerImage from '../../assets/controller.png'
+import '../../scss/spinner.scss'
 
 export const Spinner = () => {
     const spinTransition = {

@@ -3,6 +3,8 @@ import { AnimatedPage } from '../../components/navbar/AnimatedPage';
 import axios from 'axios';
 import { useState } from 'react';
 import { Spinner } from '../../components/navbar/Spinner';
+import { GameCard } from '../../components/navbar/GameCard';
+import '../../scss/browse.scss'
 
 export const Browse = () => {
   const [pageNumber, setPageNumber] = useState(0);
@@ -28,19 +30,21 @@ export const Browse = () => {
 
   return (
     <AnimatedPage>
-      <div className='container'>
-        <button onClick={handleNextPage}>Next Page</button>
-        <button onClick={handlePreviousPage}>prev Page</button>
+      <div className='game-container'>
         {isLoading ? (
           <Spinner />
         ) : (
-          <div>
-            {data.map(item => (
+          <>
+            {data.map(game => (
               <>
-                <h1>{item.title}</h1>
+                <GameCard game={game} />
               </>
             ))}
-          </div>
+            <div className='page-btns'>
+              <button onClick={handleNextPage}>Next Page</button>
+              <button onClick={handlePreviousPage}>prev Page</button>
+            </div>
+          </>
         )}
       </div>
     </AnimatedPage>

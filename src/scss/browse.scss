@@ -1,6 +1,6 @@
 @use './config';
 
-.home {
+.game-container {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
@@ -9,12 +9,8 @@
 
 }
 
-.hor-line {
-    border: 1px solid red;
-}
-
 @media only screen and (min-width: 1024px) {
-    .home {
+    .game-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
