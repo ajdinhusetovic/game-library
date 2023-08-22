@@ -3,23 +3,22 @@
 .home {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
     gap: 20px;
-    width: 100%;
-
+    width: 90%;
+    margin: 40px auto 0 auto;
 }
 
 .hor-line {
     border: 1px solid red;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
     .home {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 90%;
-        margin: 0 auto;
+        margin: 40px auto 0 auto;
 
     }
 }

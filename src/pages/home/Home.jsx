@@ -8,12 +8,10 @@ import { GameCard } from '../../components/navbar/GameCard'
 
 export const Home = () => {
 
-  // fetching data
   const { data, isLoading } = useQuery(["game"], () => {
     return axios.get("https://www.cheapshark.com/api/1.0/deals").then((res) => res.data)
   })
 
-  // loading screen
   if (isLoading) {
     return <Spinner />
   }
