@@ -1,0 +1,22 @@
+@use './config';
+
+.container {
+    .title-about {
+        font-family: config.$font-handjet;
+        font-size: 46px;
+        letter-spacing: 2px;
+        margin-left: 4px;
+    }
+
+    h3 {
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+    
+    a {
+        color: red;
+    }
+}
