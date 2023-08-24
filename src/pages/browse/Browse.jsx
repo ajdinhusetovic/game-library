@@ -44,14 +44,16 @@ export const Browse = () => {
   return (
     <AnimatedPage>
       <div className='filters'>
-        <div>
-          <label>min price</label>
+        <div className='input-filters-wrapper'>
+          <label>Min price</label>
           <input type="number" value={lowerPrice} onChange={(e) => setLowerPrice(e.target.value)} />
-          <label> max price</label>
+          <label> Max price</label>
           <input type="number" value={upperPrice} onChange={(e) => setUpperPrice(e.target.value)} />
         </div>
-        <button onClick={applyFilters}>apply</button>
-        <button onClick={resetFilters}>reset</button>
+        <div className='filter-buttons-wrapper'>
+          <button onClick={applyFilters}>apply</button>
+          <button onClick={resetFilters}>reset</button>
+        </div>
       </div>
       <div className='game-container'>
         {isLoading ? (

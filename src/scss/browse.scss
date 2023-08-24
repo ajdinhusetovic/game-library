@@ -1,5 +1,46 @@
 @use './config';
 
+.filters {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    .input-filters-wrapper {
+        display: flex;
+        align-items: center;
+        label {
+            margin-left: 20px;
+            margin-right: 4px;
+        }
+        input {
+            width: 30%;
+            padding: 8px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: config.$font-nunito;
+            font-weight: 600;
+        }
+    }
+
+    .filter-buttons-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        button {
+            padding: 8px;
+            border: 2px solid red;
+            border-radius: 6px;
+            width: 80px;
+            background-color: yellow;
+            font-family: config.$font-nunito;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}
+
 .game-container {
     display: flex;
     flex-direction: column;
@@ -29,6 +70,7 @@
         display: flex;
     }
 }
+
 
 @media only screen and (min-width: 768px) {
     .game-container {
