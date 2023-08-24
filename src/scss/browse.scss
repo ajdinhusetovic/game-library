@@ -22,10 +22,11 @@
         border-radius: 8px;
         border: 2px solid red;
         background-color: yellow;
-        font-size: 14px;
+        font-size: 26px;
         font-family: config.$font-nunito;
         text-transform: uppercase;
         font-weight: 600;
+        display: flex;
     }
 }
 

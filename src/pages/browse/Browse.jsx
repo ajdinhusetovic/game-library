@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Spinner } from '../../components/navbar/Spinner';
 import { GameCard } from '../../components/navbar/GameCard';
 import '../../scss/browse.scss'
+import { GrFormPrevious, GrFormNext } from "react-icons/gr"
 
 export const Browse = () => {
   const [pageNumber, setPageNumber] = useState(0);
@@ -41,8 +42,8 @@ export const Browse = () => {
               </>
             ))}
             <div className='page-btns'>
-              <button onClick={handleNextPage}>Next Page</button>
-              <button onClick={handlePreviousPage}>prev Page</button>
+              <button onClick={handlePreviousPage}><GrFormPrevious /></button>
+              <button onClick={handleNextPage}><GrFormNext /></button>
             </div>
           </>
         )}
