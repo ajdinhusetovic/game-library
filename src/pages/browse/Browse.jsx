@@ -8,10 +8,12 @@ import '../../scss/browse.scss'
 import { GrFormPrevious, GrFormNext } from "react-icons/gr"
 
 export const Browse = () => {
-  const [pageNumber, setPageNumber] = useState(0);
+  const [pageNumber, setPageNumber] = useState(0)
+  const [upperPrice, setUpperPrice] = useState(50)
+  const [lowerPrice, setLowerPrice] = useState(0)
 
   const { data, isLoading, refetch } = useQuery(['game', pageNumber], () => {
-    return axios.get(`https://www.cheapshark.com/api/1.0/deals?pageNumber=${pageNumber}`)
+    return axios.get(`https://www.cheapshark.com/api/1.0/deals?pageNumber=${pageNumber}&lowerPrice=${lowerPrice}&upperPrice=${upperPrice}`)
       .then((res) => res.data);
   });
 
@@ -29,8 +31,28 @@ export const Browse = () => {
     }
   };
 
+  const applyFilters = () => {
+    refetch()
+  }
+
+  const resetFilters = () => {
+    setLowerPrice(0)
+    setUpperPrice(50)
+    refetch()
+  }
+
   return (
     <AnimatedPage>
+      <div className='filters'>
+        <div>
+          <label>min price</label>
+          <input type="number" value={lowerPrice} onChange={(e) => setLowerPrice(e.target.value)} />
+          <label> max price</label>
+          <input type="number" value={upperPrice} onChange={(e) => setUpperPrice(e.target.value)} />
+        </div>
+        <button onClick={applyFilters}>apply</button>
+        <button onClick={resetFilters}>reset</button>
+      </div>
       <div className='game-container'>
         {isLoading ? (
           <Spinner />
