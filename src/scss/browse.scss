@@ -63,11 +63,13 @@
         border-radius: 8px;
         border: 2px solid red;
         background-color: yellow;
-        font-size: 26px;
+        font-size: 28px;
         font-family: config.$font-nunito;
         text-transform: uppercase;
         font-weight: 600;
         display: flex;
+        justify-content: center;
+        width: 60px;
     }
 }
 
