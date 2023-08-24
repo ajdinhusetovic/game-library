@@ -1,42 +1,42 @@
 @use './config';
 
 .filters {
-    width: 80%;
-    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 24px auto 60px auto;
+
     .input-filters-wrapper {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+
         label {
-            margin-left: 20px;
-            margin-right: 4px;
+            margin: 0 auto;
         }
+
         input {
-            width: 30%;
-            padding: 8px;
+            width: 50%;
+            margin: 0 auto 8px auto;
+            padding: 4px;
             border: none;
             border-radius: 6px;
-            font-size: 14px;
-            font-family: config.$font-nunito;
-            font-weight: 600;
+            font-size: 16px;
         }
     }
 
     .filter-buttons-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        
+        margin: 0 auto;
+
         button {
-            padding: 8px;
+            padding: 6px;
+            margin-right: 8px;
+            width: 70px;
             border: 2px solid red;
-            border-radius: 6px;
-            width: 80px;
             background-color: yellow;
             font-family: config.$font-nunito;
             text-transform: uppercase;
             font-weight: 600;
-            cursor: pointer;
+            border-radius: 6px;
         }
     }
 }
@@ -77,5 +77,31 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .input-filters-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            input {
+                width: 30%;
+                margin: 0 auto;
+                padding: 6px;
+            }
+
+            label {
+                margin-right: -8px;
+            }
+        }
+
+        .filter-buttons-wrapper {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
     }
 }
