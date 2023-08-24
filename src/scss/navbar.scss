@@ -1,6 +1,7 @@
 @use './config';
 
 .navbar {
+    font-weight: 600;
     .navbar-wrapper {
         display: flex;
         flex-direction: column;

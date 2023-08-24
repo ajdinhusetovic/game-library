@@ -17,9 +17,6 @@ export const GameCard = ({ game }) => {
             <div>
                 Deal rating: {game.dealRating}
             </div>
-            <div>
-                Steam review: {game.steamRatingText}
-            </div>
         </div>
     )
 }

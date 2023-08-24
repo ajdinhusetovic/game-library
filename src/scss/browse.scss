@@ -10,11 +10,29 @@
 
 }
 
+.page-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    button {
+        padding: 8px;
+        border-radius: 8px;
+        border: 2px solid red;
+        background-color: yellow;
+        font-size: 14px;
+        font-family: config.$font-nunito;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .game-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
     }
 }
