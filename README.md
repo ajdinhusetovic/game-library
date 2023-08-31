@@ -1,8 +1,13 @@
-# React + Vite
+# Game Tag
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Intro
+Game Tag is a website developed for finding great deals on games and game related content. Whether you're a casual player or a serious gamer, Game Tag makes it easy to discover discounts on games and other game related content all in one place. Get the best value for your money and enhance your gaming experience with Game Tag's user-friendly platform.
 
-Currently, two official plugins are available:
+### https://gametag.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+This website was built using React and SCSS. The websites data is from the CheapShark API.
+
+
+## Author
+Ajdin Husetović - ahusetovic1@gmail.com
